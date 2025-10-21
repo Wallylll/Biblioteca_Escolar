@@ -1,6 +1,5 @@
 header{
     display: flex;
-    margin: 1rem;
     width: 95%;
     align-items: center;
     justify-content: space-between;
@@ -20,8 +19,9 @@ header a{
 header a:hover{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
-    color: chocolate;
+    color: #504d49;
 }
-p{
-    color: #5D2A13;
+p, h1{
+    font-weight: bold;
+    color: #504d49;
 }

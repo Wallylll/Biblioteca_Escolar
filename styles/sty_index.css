@@ -1,11 +1,25 @@
-main{
-    background-color: pink;
-    padding: 1rem;
-    margin: 1rem;
+.container{
+    padding : 1rem;
+    margin: 0.5rem;
 }
-#slider{
-    display: flex;
+#slider {
+  display: flex;
+  padding: 1rem;
 }
-.cover{
-    background-color: red;
+
+#slider img {
+  width: 200px;  /* ajuste conforme o tamanho das capas */
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+#slider img:hover {
+   transform: scale(1.05);
+}
+
+.swiper {
+  width: 70rem;
+}
+.swiper {
+  --swiper-navigation-color: #9e9a95;     /* cor das setas */
+  --swiper-pagination-color: #9e9a95;     /* cor dos bullets */
 }

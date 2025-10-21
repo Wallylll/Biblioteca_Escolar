@@ -23,22 +23,29 @@
     </p>
 
     <h1>Leia os melhores títulos da biblioteca</h1>
+
+    <!-- Slider main container -->
     <div class="container swiper">
-        <div class="card-wrapper">
-            <ul id="slider" class="card-list swiper-wrapper"></ul>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper" id="slider"></div>
+        <!-- If we need pagination -->
 
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
     </div>
+    
+    <a href=""><button>Agendar Agora</button></a>
 
-    <script type="module" src="scripts/scr_slider.js"></script>
+    <script type="module" src="./scripts/scr_slider.js"></script>
 
     <!--Linking SwiperJS script-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!--Linking custom script-->
-    <script src="./scripts/lib/scr_swiper.js"></script>
+    <script src="./scripts/lib/scr_swiper.js" defer></script>
 </body>
 </html>

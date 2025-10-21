@@ -1,21 +1,27 @@
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
+  direction: 'horizontal',     // horizontal para colocar lado a lado
+  loop: true,                  // mantém o loop infinito
+                               // 👈 mostra 3 livros por vez
+  spaceBetween: 10,            // espaço em pixels entre eles
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+
+  // opcional: faz o layout ficar responsivo
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 }
+  }
 });
