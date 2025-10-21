@@ -10,11 +10,17 @@ header img{
 }
 header nav{
     display: flex;
+    gap: 1rem;
 }
 header a{
     text-decoration: none;
     color: #5D2A13;
     font-size: 2rem;
+}
+header a:hover{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: chocolate;
 }
 p{
     color: #5D2A13;

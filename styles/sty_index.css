@@ -1,0 +1,11 @@
+main{
+    background-color: pink;
+    padding: 1rem;
+    margin: 1rem;
+}
+#slider{
+    display: flex;
+}
+.cover{
+    background-color: red;
+}
