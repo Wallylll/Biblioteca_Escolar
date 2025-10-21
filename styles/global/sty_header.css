@@ -1,0 +1,21 @@
+header{
+    display: flex;
+    margin: 1rem;
+    width: 95%;
+    align-items: center;
+    justify-content: space-between;
+}
+header img{
+    width: 15%;
+}
+header nav{
+    display: flex;
+}
+header a{
+    text-decoration: none;
+    color: #5D2A13;
+    font-size: 2rem;
+}
+p{
+    color: #5D2A13;
+}
