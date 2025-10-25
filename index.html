@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="styles/global/sty_allPage.css">
     <link rel="stylesheet" href="styles/global/sty_header.css">
     <link rel="stylesheet" href="styles/sty_index.css">
+    <link rel="stylesheet" href="styles/global/sty_login.css">
 
     <!--Linking SwiperJS CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 </head>
 <body>
+    <dialog class="modalSpace"></dialog>
+    
     <header>
         <img src="img/ico_BE.png" alt="Ícone BIBLIOTECA ESCOLAR">
         <nav>
@@ -38,8 +41,11 @@
         <div class="swiper-scrollbar"></div>
     </div>
     
-    <a href=""><button>Agendar Agora</button></a>
+    <button id="show">Agendar Agora</button>
 
+
+    <script type="module" src="./scripts/scr_login.js"></script>
+    
     <script type="module" src="./scripts/scr_slider.js"></script>
 
     <!--Linking SwiperJS script-->

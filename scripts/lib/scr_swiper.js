@@ -1,7 +1,7 @@
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',     // horizontal para colocar lado a lado
   loop: true,                  // mantém o loop infinito
-                               // 👈 mostra 3 livros por vez
+  slidesPerView: 3,                  // 👈 mostra 3 livros por vez
   spaceBetween: 10,            // espaço em pixels entre eles
 
   pagination: {
