@@ -1,4 +1,162 @@
-.modalSpace{
-    margin: auto;
-    padding: 1rem;
+/* --- Área geral do modal --- */
+.modalSpace {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(80, 77, 73, 0.7); /* fundo semitransparente */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  z-index: 5;
+}
+
+/* --- Estrutura principal do modal --- */
+.modal {
+  background-color: #E6CCB3; /* bege suave */
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  width: 360px;
+  animation: fadeIn 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 1.5rem;
+  color: #2c2b2a;
+}
+
+/* --- Cabeçalho --- */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  border-bottom: 2px solid #9e9a95;
+  padding-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  color: #5D2A13;
+  font-weight: bold;
+}
+
+.close {
+  background: none;
+  border: none;
+  color: #5D2A13;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #9e9a95;
+}
+
+/* --- Corpo do formulário --- */
+.modal-body {
+  margin-top: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #5D2A13;
+  font-weight: 500;
+}
+
+input {
+  padding: 0.6rem;
+  border: 1px solid #9e9a95;
+  border-radius: 6px;
+  outline: none;
+  background-color: #f9f5f1;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #5D2A13;
+}
+
+/* --- Campo de senha com botão --- */
+.password-field {
+  position: relative;
+}
+
+.password-field button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #5D2A13;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.password-field button:hover {
+  color: #9e9a95;
+}
+
+/* --- Rodapé (botões principais) --- */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #5D2A13;
+  color: #E6CCB3;
+}
+
+.btn-primary:hover {
+  background-color: #504d49;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #5D2A13;
+  border: 1px solid #5D2A13;
+}
+
+.btn-secondary:hover {
+  background-color: #5D2A13;
+  color: #E6CCB3;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 420px) {
+  .modal {
+    width: 90%;
+  }
 }

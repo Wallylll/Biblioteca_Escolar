@@ -11,4 +11,7 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
+
+    background-image: radial-gradient(#e8d6c5 1px, transparent 1px);
+    background-size: 6px 6px;
 }

@@ -23,3 +23,140 @@
   --swiper-navigation-color: #9e9a95;     /* cor das setas */
   --swiper-pagination-color: #9e9a95;     /* cor dos bullets */
 }
+
+/* ====== Botão principal ====== */
+#show {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.9rem 2rem;
+  background-color: #5D2A13; /* marrom escuro */
+  color: #E6CCB3; /* bege claro */
+  border: 2px solid #5D2A13;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(80, 77, 73, 0.25);
+}
+
+/* Efeito hover */
+#show:hover {
+  background-color: #504d49;
+  color: #E6CCB3;
+  border-color: #504d49;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(80, 77, 73, 0.35);
+}
+
+/* Efeito de clique */
+#show:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 6px rgba(80, 77, 73, 0.3);
+}
+
+/* ====== Botão em telas menores ====== */
+@media (max-width: 600px) {
+  #show {
+    width: 90%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+}
+
+
+/* ====== Tablets (até 1024px) ====== */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  header img {
+    width: 90px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  p {
+    width: 90%;
+    margin: 1rem auto;
+    font-size: 1rem;
+  }
+
+  .swiper {
+    width: 80%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  #show {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+  }
+}
+
+/* ====== Celulares (até 600px) ====== */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  header img {
+    width: 70px;
+  }
+
+  nav {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  p {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* Esconde botões, o toque no slide será suficiente */
+  }
+
+  #show {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .modal {
+    width: 90%;
+  }
+}
