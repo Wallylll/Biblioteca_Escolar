@@ -1,4 +1,4 @@
-import livros from "./scr_livros.js"
+import livros from "./database/scr_livros.js"
 
 
 const slider = document.querySelector("#slider");

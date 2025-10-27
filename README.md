@@ -10,3 +10,6 @@ Versões:
     
   V1.3:
     -Estilizando as páginas e formatando as proporções para dispositivos móveis;
+
+  V1.4:
+    -Adicionando um verificador para levar para a próxima página da biblioteca;

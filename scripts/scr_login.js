@@ -63,6 +63,12 @@ function showLogin() {
     });
 }
 
+const btn_primary = document.querySelector(".btn_primary");
+
+btn_primary.onclick() = function(){
+    window.location.href = "templates/library.html";
+}
+
 function closeLogin() {
     modalSpace.style.display = "none";
 }
