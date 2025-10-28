@@ -16,3 +16,6 @@ Versões:
 
   V1.5:
     -Adicionando a página de navegação e emprestimo de livros;
+
+  V1.6;
+    -Adicionando uma página sobre, para descrever o projeto e o desenvolvedor;

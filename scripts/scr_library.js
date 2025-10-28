@@ -3,6 +3,9 @@ import livros from "./database/scr_livros.js";
 const bookList = document.getElementById("bookList");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
+const emprestimosBtn = document.getElementById("meusEmprestimosBtn");
+
+let meusEmprestimos = []; // Array para armazenar livros emprestados
 
 /* === FUNÇÃO PARA EXIBIR OS LIVROS === */
 function exibirLivros(lista) {
@@ -53,7 +56,6 @@ function pesquisar() {
 searchInput.addEventListener("input", pesquisar);
 searchBtn.addEventListener("click", pesquisar);
 
-
 /* === MODAL DINÂMICO === */
 function criarModal() {
   const modal = document.createElement("div");
@@ -72,6 +74,12 @@ const modal = criarModal();
 const modalContent = modal.querySelector(".modal-body");
 const closeBtn = modal.querySelector(".close-btn");
 
+closeBtn.addEventListener("click", () => modal.classList.remove("show"));
+modal.addEventListener("click", e => {
+  if (e.target === modal) modal.classList.remove("show");
+});
+
+/* === ABRIR MODAL DE LIVRO === */
 function abrirModal(livro) {
   const status = livro.unidades > 0 
     ? `<p class="book-status available"><i class="fa-solid fa-circle-check"></i> Disponível (${livro.unidades} unidade${livro.unidades > 1 ? 's' : ''})</p>`
@@ -86,12 +94,63 @@ function abrirModal(livro) {
     <p><strong>Gênero:</strong> ${livro.genero}</p>
     <p><strong>Linguagem:</strong> ${livro.linguagem}</p>
     ${status}
+    <button id="emprestarBtn" class="btn"${livro.unidades === 0 ? "disabled" : ""}>
+      ${livro.unidades === 0 ? "Indisponível" : "Adicionar aos meus empréstimos"}
+    </button>
   `;
+
+  const emprestarBtn = document.getElementById("emprestarBtn");
+  emprestarBtn.addEventListener("click", () => {
+    if (livro.unidades > 0) {
+      if (!meusEmprestimos.some(l => l.id === livro.id)) {
+        meusEmprestimos.push({ ...livro, devolvido: false });
+        livro.unidades--; // Reduz a unidade disponível
+        alert(`O livro "${livro.nome}" foi adicionado aos seus empréstimos!`);
+      } else {
+        alert("Você já adicionou este livro aos seus empréstimos!");
+      }
+      modal.classList.remove("show");
+      exibirLivros(livros); // Atualiza lista de livros
+    }
+  });
 
   modal.classList.add("show");
 }
 
-closeBtn.addEventListener("click", () => modal.classList.remove("show"));
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.classList.remove("show");
-});
+/* === MODAL DE MEUS EMPRÉSTIMOS === */
+emprestimosBtn.addEventListener("click", () => abrirModalEmprestimos());
+
+function abrirModalEmprestimos() {
+  modalContent.innerHTML = `<h2>Meus Empréstimos</h2>`;
+
+  if (meusEmprestimos.length === 0) {
+    modalContent.innerHTML += "<p>Nenhum livro emprestado ainda.</p>";
+  } else {
+    meusEmprestimos.forEach((livro, index) => {
+      const status = livro.devolvido 
+        ? "<span class='book-status available'>Devolvido ✅</span>"
+        : "<span class='book-status unavailable'>Não devolvido ❌</span>";
+
+      const livroDiv = document.createElement("div");
+      livroDiv.classList.add("book-card");
+      livroDiv.innerHTML = `
+        <h3>${livro.nome}</h3>
+        <p><strong>Autor:</strong> ${livro.autor}</p>
+        ${status}
+        <button class="devolverBtn" ${livro.devolvido ? "disabled" : ""}>Devolver</button>
+      `;
+
+      livroDiv.querySelector(".devolverBtn").addEventListener("click", () => {
+        meusEmprestimos[index].devolvido = true;
+        const livroOriginal = livros.find(l => l.id === livro.id);
+        if (livroOriginal) livroOriginal.unidades++; // devolve ao estoque
+        abrirModalEmprestimos(); // Atualiza modal
+        exibirLivros(livros); // Atualiza lista de livros
+      });
+
+      modalContent.appendChild(livroDiv);
+    });
+  }
+
+  modal.classList.add("show");
+}

@@ -1,49 +1,43 @@
-const modalSpace = document.querySelector(".modalSpace");
-
 const login = `
-    <div class="modal">
+        <div class="modal">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Entrar na sua conta</h5>
-                    <button type="button" class="close" aria-label="Fechar">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form class="login-form">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Digite seu email" required>
-
-                        <label for="senha">Senha</label>
-                        <div class="password-field">
-                            <input type="password" id="senha" placeholder="Digite sua senha" required>
-                            <button type="button" id="togglePassword" aria-label="Mostrar senha">
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-                        </div>
-
-                        <div class="form-buttons">
-                            <button type="submit" class="btn btn-primary">Entrar</button>
-                            <button type="button" class="btn btn-secondary">Criar conta</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Entrar na sua conta</h5>
+        <button type="button" class="close" aria-label="Fechar">&times;</button>
         </div>
-    </div>
+        <div class="modal-body">
+        <form class="login-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Digite seu email" required>
+
+        <label for="senha">Senha</label>
+        <div class="password-field">
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+        <button type="button" id="togglePassword" aria-label="Mostrar senha">
+        <i class="fa-solid fa-eye"></i>
+        </button>
+        </div>
+
+        <div class="form-buttons">
+        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="button" class="btn btn-secondary">Criar conta</button>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
 `;
 
-const btn_show_index = document.querySelector("#show_index");
-const btn_show_library = document.querySelector("#show_library");
+let btn_login = document.querySelector("#show");
 
-btn_show_index.addEventListener("click", (event)=>{
-    event.preventDefault();
-    showLogin();
-});
-btn_show_library.addEventListener("click", (event)=>{
+btn_login.addEventListener("click", (event)=>{
     event.preventDefault();
     showLogin();
 });
 
+const modalSpace = document.querySelector(".modalSpace");
 function showLogin() {
     modalSpace.innerHTML = login;
 
