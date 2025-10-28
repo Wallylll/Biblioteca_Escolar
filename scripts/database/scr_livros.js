@@ -1,4 +1,4 @@
-const livros = [
+/*const livros = [
   {
     id: "bk001",
     nome: "Sombras do Amanhã",
@@ -498,6 +498,132 @@ const livros = [
     genero: "Romance Contemporâneo",
     linguagem: "Português",
     ilustracao: "https://covers.openlibrary.org/b/id/12610499-L.jpg"
+  }
+];
+
+export default livros;
+*/
+
+const livros = [
+  {
+    id: "bk001",
+    nome: "Sombras do Amanhã",
+    autor: "Lucas Andrade",
+    editora: "Horizonte Editorial",
+    dataLancamento: "2011-02-14",
+    genero: "Ficção Científica",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/9874851-L.jpg",
+    sinopse: "Em um futuro distópico, um cientista tenta salvar o mundo de uma catástrofe temporal causada por suas próprias invenções.",
+    unidades: 3
+  },
+  {
+    id: "bk002",
+    nome: "Caminhos de Areia",
+    autor: "Marta Pires",
+    editora: "Editora Horizonte",
+    dataLancamento: "2015-07-09",
+    genero: "Romance",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/8228752-L.jpg",
+    sinopse: "Um romance sobre amor, perda e recomeços em meio às dunas de uma pequena vila litorânea.",
+    unidades: 0
+  },
+  {
+    id: "bk003",
+    nome: "O Último Jardim",
+    autor: "Renato Mota",
+    editora: "Vértice Press",
+    dataLancamento: "2019-06-03",
+    genero: "Fantasia",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/9876310-L.jpg",
+    sinopse: "Num mundo devastado, uma jovem jardineira descobre o último fragmento de vida capaz de restaurar o planeta.",
+    unidades: 5
+  },
+  {
+    id: "bk004",
+    nome: "Ecos de Silêncio",
+    autor: "Juliana Tavares",
+    editora: "Lume Literário",
+    dataLancamento: "2017-09-25",
+    genero: "Drama",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/9256721-L.jpg",
+    sinopse: "Uma escritora em crise criativa retorna à sua cidade natal e confronta traumas que ecoam no silêncio de seu passado.",
+    unidades: 2
+  },
+  {
+    id: "bk005",
+    nome: "A Lenda de Seraphim",
+    autor: "Diego Neves",
+    editora: "Mundo Novo",
+    dataLancamento: "2020-12-11",
+    genero: "Fantasia Épica",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/9872404-L.jpg",
+    sinopse: "Heróis esquecidos e forças antigas colidem quando o reino de Seraphim enfrenta sua maior ameaça.",
+    unidades: 7
+  },
+  {
+    id: "bk006",
+    nome: "Códigos e Sombras",
+    autor: "André Vilela",
+    editora: "TechBooks",
+    dataLancamento: "2014-03-30",
+    genero: "Suspense Tecnológico",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/9123451-L.jpg",
+    sinopse: "Um hacker é perseguido após decifrar um código secreto que pode expor uma conspiração global.",
+    unidades: 4
+  },
+  {
+    id: "bk007",
+    nome: "Jardins Invisíveis",
+    autor: "Paula Duarte",
+    editora: "Editora Aurora",
+    dataLancamento: "2018-08-21",
+    genero: "Poesia",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/8342512-L.jpg",
+    sinopse: "Uma coletânea poética sobre a natureza invisível dos sentimentos e das memórias perdidas.",
+    unidades: 1
+  },
+  {
+    id: "bk008",
+    nome: "O Guardião da Chuva",
+    autor: "Caio Albuquerque",
+    editora: "Sol Nascente",
+    dataLancamento: "2013-04-18",
+    genero: "Ficção Fantástica",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/8245222-L.jpg",
+    sinopse: "Uma história mágica sobre um menino que pode controlar a chuva e o destino das colheitas.",
+    unidades: 0
+  },
+  {
+    id: "bk009",
+    nome: "Fragmentos do Tempo",
+    autor: "Larissa Mendes",
+    editora: "Estação Letras",
+    dataLancamento: "2016-10-04",
+    genero: "Ficção Histórica",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/11153210-L.jpg",
+    sinopse: "Cartas e memórias entrelaçam as vidas de duas pessoas separadas por um século.",
+    unidades: 6
+  },
+  {
+    id: "bk010",
+    nome: "Ventos do Norte",
+    autor: "Rogério Bastos",
+    editora: "Alvorada",
+    dataLancamento: "2021-02-10",
+    genero: "Aventura",
+    linguagem: "Português",
+    ilustracao: "https://covers.openlibrary.org/b/id/12610310-L.jpg",
+    sinopse: "Um explorador enfrenta os ventos gelados do norte em busca de um artefato lendário perdido.",
+    unidades: 3
   }
 ];
 

@@ -15,3 +15,12 @@ body{
     background-image: radial-gradient(#e8d6c5 1px, transparent 1px);
     background-size: 6px 6px;
 }
+
+/* ======== TITULO DA PÁGINA ======== */
+.title{
+    display: flex;
+    justify-content: center;
+}
+.link{
+    text-decoration: none;
+}

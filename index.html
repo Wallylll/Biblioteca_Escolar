@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Escolar</title>
+
     <link rel="stylesheet" href="styles/global/sty_allPage.css">
     <link rel="stylesheet" href="styles/global/sty_header.css">
     <link rel="stylesheet" href="styles/sty_index.css">
     <link rel="stylesheet" href="styles/global/sty_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
     <!--Linking SwiperJS CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 </head>
@@ -20,7 +20,7 @@
         <img src="img/ico_BE.png" alt="Ícone BIBLIOTECA ESCOLAR">
         <nav>
             <a href="">Projeto,</a>
-            <a id="show">Login</a>
+            <a href="" id="show_index">Login</a>
         </nav>
     </header>
     <p>A Plataforma Web da Biblioteca Escolar é um sistema digital que moderniza o acesso e a gestão do acervo, permitindo consultas, empréstimos e devoluções de forma prática e integrada.
@@ -42,16 +42,13 @@
         <div class="swiper-scrollbar"></div>
     </div>
     
-    <button class="btn forLibrary">Agendar Agora</button>
+    <a href="templates/library.html" class="link"><button class="btn">Agendar Agora</button></a>
 
 
     <script type="module" src="./scripts/scr_login.js"></script>
-    
     <script type="module" src="./scripts/scr_slider.js"></script>
-
     <!--Linking SwiperJS script-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
     <!--Linking custom script-->
     <script src="./scripts/lib/scr_swiper.js" defer></script>
 </body>

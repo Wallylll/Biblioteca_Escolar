@@ -32,9 +32,17 @@ const login = `
     </div>
 `;
 
-const btn_show = document.querySelector("#show");
+const btn_show_index = document.querySelector("#show_index");
+const btn_show_library = document.querySelector("#show_library");
 
-btn_show.addEventListener("click", showLogin);
+btn_show_index.addEventListener("click", (event)=>{
+    event.preventDefault();
+    showLogin();
+});
+btn_show_library.addEventListener("click", (event)=>{
+    event.preventDefault();
+    showLogin();
+});
 
 function showLogin() {
     modalSpace.innerHTML = login;
@@ -66,8 +74,3 @@ function showLogin() {
 function closeLogin() {
     modalSpace.style.display = "none";
 }
-
-const btn_library = document.querySelector(".forLibrary");
-btn_library.addEventListener("click", () => {
-    window.location.href = "templates/library.html"
-});

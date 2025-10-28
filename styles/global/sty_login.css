@@ -8,6 +8,8 @@
   align-items: center;
   margin: auto;
   z-index: 5;
+  width: 20%;
+  height: 20%;
 }
 
 /* --- Estrutura principal do modal --- */

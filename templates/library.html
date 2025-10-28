@@ -4,33 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biblioteca Escolar - Acervo</title>
+
   <link rel="stylesheet" href="../styles/global/sty_allPage.css">
   <link rel="stylesheet" href="../styles/global/sty_header.css">
+  <link rel="stylesheet" href="../styles/global/sty_login.css">
   <link rel="stylesheet" href="../styles/sty_library.css">
 </head>
 <body>
+  <dialog class="modalSpace"></dialog>
+
   <header>
     <img src="../img/ico_BE.png" alt="Ícone Biblioteca Escolar">
     <nav>
       <a href="../index.html">Início</a>
       <a href="#">Meus Empréstimos</a>
-      <a href="#">Sair</a>
+      <a href="" id="show_library">Login</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Acervo da Biblioteca</h1>
+<main>
+  <h1 class="title">Acervo da Biblioteca</h1>
 
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Pesquisar por título, autor ou gênero...">
-      <button id="searchBtn">Buscar</button>
-    </div>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Pesquisar por título, autor ou gênero...">
+    <button id="searchBtn">Buscar</button>
+  </div>
 
+  <div class="books-section">
     <div class="book-list" id="bookList">
-      <!-- Livros inseridos dinamicamente pelo JavaScript -->
+      <!-- Livros inseridos dinamicamente -->
     </div>
-  </main>
+  </div>
+</main>
 
   <script type="module" src="../scripts/scr_library.js"></script>
+  <script type="module" src="../scripts/scr_login.js"></script>
 </body>
 </html>
