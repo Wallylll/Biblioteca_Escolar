@@ -13,3 +13,6 @@ Versões:
 
   V1.4:
     -Adicionando um verificador para levar para a próxima página da biblioteca;
+
+  V1.5:
+    -Adicionando a página de navegação e emprestimo de livros;

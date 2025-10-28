@@ -1,0 +1,133 @@
+
+
+/* ======== BARRA DE PESQUISA ======== */
+.search-bar {
+    margin: 30px auto 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    max-width: 700px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #5D2A13;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fffaf3;
+    color: #504d49;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #9e9a95;
+}
+
+.search-bar button {
+    background-color: #5D2A13;
+    color: #E6CCB3;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #9e9a95;
+    color: #5D2A13;
+}
+
+/* ======== ÁREA DOS LIVROS ======== */
+.books-section {
+    flex: 1;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fffaf3;
+    border: 2px solid #9e9a95;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+/* Scrollbar personalizada */
+.books-section::-webkit-scrollbar {
+    width: 10px;
+}
+.books-section::-webkit-scrollbar-track {
+    background: #E6CCB3;
+}
+.books-section::-webkit-scrollbar-thumb {
+    background-color: #9e9a95;
+    border-radius: 5px;
+}
+
+/* ======== GRID DE LIVROS ======== */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background-color: #E6CCB3;
+    border: 1px solid #5D2A13;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.book-card h3 {
+    font-size: 1rem;
+    color: #5D2A13;
+    margin: 10px 0 5px;
+}
+
+.book-card p {
+    font-size: 0.9rem;
+    color: #504d49;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%;
+    }
+
+    .books-section {
+        max-height: none;
+        height: auto;
+    }
+}

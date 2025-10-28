@@ -25,7 +25,7 @@
 }
 
 /* ====== Botão principal ====== */
-#show {
+.btn {
   display: block;
   margin: 2rem auto;
   padding: 0.9rem 2rem;
@@ -43,7 +43,7 @@
 }
 
 /* Efeito hover */
-#show:hover {
+.btn:hover {
   background-color: #504d49;
   color: #E6CCB3;
   border-color: #504d49;
@@ -52,14 +52,14 @@
 }
 
 /* Efeito de clique */
-#show:active {
+.btn:active {
   transform: scale(0.97);
   box-shadow: 0 3px 6px rgba(80, 77, 73, 0.3);
 }
 
 /* ====== Botão em telas menores ====== */
 @media (max-width: 600px) {
-  #show {
+  .btn {
     width: 90%;
     padding: 1rem;
     font-size: 1rem;
@@ -100,7 +100,7 @@
     font-size: 1.6rem;
   }
 
-  #show {
+  .btn {
     display: block;
     margin: 1.5rem auto;
     padding: 0.7rem 1.4rem;
@@ -150,7 +150,7 @@
     display: none; /* Esconde botões, o toque no slide será suficiente */
   }
 
-  #show {
+  .btn {
     width: 90%;
     font-size: 1rem;
     padding: 0.8rem;
